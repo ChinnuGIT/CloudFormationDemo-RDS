@@ -1,0 +1,58 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: This Template Create a RDS.
+
+Parameters:
+
+  DatabaseInstanceIdentifier: 
+   Type: String
+  
+  DBname:
+    Type: String
+  
+  Muser:
+    Type: String
+  
+  Mpass:
+    Type: String
+
+  DatabaseName:
+   Type: String
+
+  RDSPublicSubnet01:
+    Type: String
+  
+  RDSPublicSubnet02:
+    Type: String
+
+
+Resources:
+
+
+  RDSDBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties: 
+      DBSubnetGroupDescription: "Subnets for RDS"
+      DBSubnetGroupName: DBSubnetGroup
+      SubnetIds: 
+        - !Ref RDSPublicSubnet01
+        - !Ref RDSPublicSubnet02
+    
+  MyDBInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: 5
+      DBInstanceClass: db.t2.micro
+      Engine: MySQL
+      EngineVersion: '5.7'
+      Port: 3306
+      MasterUsername: !Ref Muser
+      MasterUserPassword: !Ref Mpass
+      DBInstanceIdentifier: !Ref DatabaseInstanceIdentifier
+      DBSubnetGroupName: !Ref RDSDBSubnetGroup
+      DBName: !Ref DatabaseName
+      PubliclyAccessible: true
+      AvailabilityZone: ap-south-1a
+      
+  
+      
