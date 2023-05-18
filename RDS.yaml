@@ -1,16 +1,15 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: This Template Create an RDS in Data subnet.
-
 Parameters: 
 
   
-VPCId:
+ VPCId:
   Description: Put a VPC Id here
   Type: String
   Default: vpc-07769cfeddd4729ac
     
-PrivateSubnetId:
+ PrivateSubnetId:
   Description: Put a subnet Id here
   Type: String
   Default: subnet-01d8deb93cbf86635
