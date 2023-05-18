@@ -45,6 +45,6 @@ Resources:
     DBSubnetGroupName: !Ref RDSSubnetGroup
 
 Outputs:
-RDSInstanceEndpoint:
+ RDSInstanceEndpoint:
   Description: Endpoint URL of the RDS instance
   Value: !GetAtt RDSInstance.Endpoint.Address
