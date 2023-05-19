@@ -13,7 +13,11 @@ Parameters:
   Description: Put a subnet Id here
   Type: String
   Default: subnet-01d8deb93cbf86635
-
+  
+ PrivateSubnetId01:
+  Description: Put a subnet Id here
+  Type: String
+  Default: subnet-040817b226556f3d0
 
 Resources:
  RDSSecurityGroup:
@@ -29,7 +33,7 @@ Resources:
     DBSubnetGroupDescription: RDS Subnet Group
     SubnetIds:
       - !Ref PrivateSubnetId
-      - !Ref PrivateSubnetId
+      - !Ref PrivateSubnetId01
 
  RDSInstance:
   Type: AWS::RDS::DBInstance
