@@ -9,12 +9,12 @@ Parameters:
   Type: String
   Default: vpc-07769cfeddd4729ac
     
- PrivateSubnetId:
+ PublicSubnetId:
   Description: Put a subnet Id here
   Type: String
   Default: subnet-09f88259c2cab7f90
   
- PrivateSubnetId01:
+ PublicSubnetId01:
   Description: Put a subnet Id here
   Type: String
   Default: subnet-040817b226556f3d0
@@ -32,8 +32,8 @@ Resources:
     DBSubnetGroupName: RDSSubnetGroup
     DBSubnetGroupDescription: RDS Subnet Group
     SubnetIds:
-      - !Ref PrivateSubnetId
-      - !Ref PrivateSubnetId01
+      - !Ref PublicSubnetId
+      - !Ref PublicSubnetId01
 
  RDSInstance:
   Type: AWS::RDS::DBInstance
