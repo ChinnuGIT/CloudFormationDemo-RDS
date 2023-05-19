@@ -12,7 +12,7 @@ Parameters:
  PrivateSubnetId:
   Description: Put a subnet Id here
   Type: String
-  Default: subnet-01d8deb93cbf86635
+  Default: subnet-09f88259c2cab7f90
   
  PrivateSubnetId01:
   Description: Put a subnet Id here
