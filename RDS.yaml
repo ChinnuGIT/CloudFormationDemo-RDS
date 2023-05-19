@@ -12,12 +12,12 @@ Parameters:
  PublicSubnetId:
   Description: Put a subnet Id here
   Type: String
-  Default: subnet-09f88259c2cab7f90
+  Default: subnet-040817b226556f3d0
   
  PublicSubnetId01:
   Description: Put a subnet Id here
   Type: String
-  Default: subnet-040817b226556f3d0
+  Default: subnet-052149411cbeb002c
 
 Resources:
  RDSSecurityGroup:
