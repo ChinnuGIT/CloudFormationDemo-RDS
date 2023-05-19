@@ -29,6 +29,7 @@ Resources:
     DBSubnetGroupDescription: RDS Subnet Group
     SubnetIds:
       - !Ref PrivateSubnetId
+      - !Ref PrivateSubnetId
 
  RDSInstance:
   Type: AWS::RDS::DBInstance
